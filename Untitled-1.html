@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profil de Jackemie</title>
+    <style>
+        ::-webkit-scrollbar {
+        width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px 5% 0px 5%;
+        }
+        h1 {
+            color: #333333;
+        }
+        #profile {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        #extra-details {
+            margin-top: 20px;
+            font-style: italic;
+        }
+        .hidden {
+            display: none;
+        }
+        .btn {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #696868;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer; 
+        }
+        a {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="profile">
+        <h1>Profil de Jackemie</h1>
+        <label for="name">Nom:</label>
+        <span id="name">Jacques</span><br>
+
+        <label for="age">Âge:</label>
+        <span id="age">17 ans</span><br>
+
+        <label for="gender">Genre:</label>
+        <span id="gender">Homme</span><br>
+
+        <label for="marital-status">Statut actuel:</label>
+        <span id="marital-status">Célibataire</span><br>
+
+        <label for="origin">Origine:</label>
+        <span id="origin">Sénégalaise et Française</span><br>
+
+        <label for="height">Taille:</label>
+        <span id="height">178 cm</span><br>
+
+        <label for="passions">Passions:</label>
+        <span id="passions">Aviation, Rugby</span><br>
+
+        <label for="weakness">Défaut:</label>
+        <span id="weakness">Insensibilité sur certains points forts</span><br>
+
+        <label for="qualities">Qualités:</label>
+        <span id="qualities">A déterminer...</span><br>
+
+        <div id="extra-details" class="hidden">
+            <p>Informations supplémentaires :</p>
+            <p>Pseudo: Jackemie</p>
+            <p>Passions supplémentaires: Musique, Photographie</p>
+            <p>Langues parlées: Français, Espagnol, Anglais, Wolof</p>
+
+            <p>Comment tes amis te décrivent ? Ils disent que je suis drôle, attentionné et loyal.</p>
+            <p>A quoi ressemble ton avenir idéal ? Mon avenir idéal serait d'avoir une carrière réussie, une famille aimante et la possibilité de voyager.</p>
+            <p>Est-ce que tu voudrais voyager dans le futur ? Oui, je serais curieux de voir comment le monde évolue.</p>
+            <p>Quel est ton meilleur souvenir d'enfance ? Mon meilleur souvenir d'enfance est lorsque j'ai remporté mon premier match de rugby.</p>
+            <p>Où est-ce que tu te sens le plus chez toi ? Je me sens le plus chez moi lorsque je suis entouré de ma famille et de mes amis.</p>
+            <p>Ton métier de rêve quand tu étais jeune, c'était quoi ? Quand j'étais jeune, mon métier de rêve était de devenir pilote d'avion.</p>
+            <p>Est-ce que tu crois au coup de foudre ? Oui, je crois au coup de foudre.</p>
+            <p>As-tu déjà été en couple ? Oui, 7 fois malheureusment.</p>
+        </div>
+
+        <button id="reveal-btn" class="btn">Tu veux en savoir plus ?</button>
+        <button id="hide-btn" class="btn hidden">C'est bon ?</button>
+        <a href="https://discord.gg/p8tB8BW2" style="text-decoration:none">Vien sur le discord</a>
+    </div>
+
+    <script>
+        // Révéler les informations supplémentaires
+        var revealButton = document.getElementById("reveal-btn");
+        var hideButton = document.getElementById("hide-btn");
+        var extraDetails = document.getElementById("extra-details");
+
+        revealButton.addEventListener("click", function() {
+            extraDetails.classList.remove("hidden");
+            revealButton.style.display = "none";
+            hideButton.style.display = "inline-block";
+        });
+
+        // Cacher les informations supplémentaires
+        hideButton.addEventListener("click", function() {
+            extraDetails.classList.add("hidden");
+            hideButton.style.display = "none";
+            revealButton.style.display = "inline-block";
+        });
+    </script>
+</body>
+</html>
